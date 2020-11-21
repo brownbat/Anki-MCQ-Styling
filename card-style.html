@@ -1,0 +1,46 @@
+{{Question}}
+
+
+<script>
+/* Randomize array in-place using Durstenfeld shuffle algorithm */
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
+var arr = "{{Herrings}}"
+arr = arr.split("; ");
+shuffleArray(arr);
+arr = arr.slice(1, 4);
+arr.push("{{Answer}}");
+shuffleArray(arr);
+
+var ans1 = arr[0];
+var ans2 = arr[1];
+var ans3 = arr[2];
+var ans4 = arr[3];
+
+
+
+document.getElementById('a1').innerHTML = ans1;
+document.getElementById('a2').innerHTML = ans2;
+document.getElementById('a3').innerHTML = ans3;
+document.getElementById('a4').innerHTML = ans4;
+</script>
+
+<br>
+A. <span id="a1"></span>
+<br>
+B.
+<span id="a2"></span>
+<br>
+C.
+<span id="a3"></span>
+<br>
+D.
+<span id="a4"></span>
+
